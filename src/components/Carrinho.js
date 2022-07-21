@@ -5,7 +5,7 @@ export default function Carrinho(props) {
   
   return (
     <aside className="block col-1">
-      <h2>Itens do Carrinho</h2>
+      <h2>Itens do Carrinho </h2>
       <div>
        
       </div>
