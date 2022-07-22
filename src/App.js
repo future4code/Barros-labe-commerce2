@@ -41,6 +41,7 @@ function App() {
         <Home products={produtos} onAdd={onAdd}></Home>
         <Carrinho
           cartItems={cartItems}
+          onRemove
         ></Carrinho>
       </div>
     </div>

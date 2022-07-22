@@ -1,4 +1,4 @@
-import React, {userState} from 'react';
+import React from 'react';
 
 export default function Carrinho(props) {
   const {cartItems, onRemove} = props;
@@ -13,15 +13,19 @@ export default function Carrinho(props) {
             <li>
                 {product.qty}x
                 Nome:{product.name}
+              <button onClick={onRemove.qty}>Remover</button> 
             </li>
           ))}
           
+          
         </ul>
-        Valor total:{(parseInt(cartItems.reduce((total, product) => (product.price * product.qty) + total, 0))).toLocaleString('pt-BR', {
+        Valor Total:{(parseInt(cartItems.reduce((total, product) => (product.price * product.qty) + total, 0))).toLocaleString('pt-BR', {
           style: 'currency',
           currency: 'BRL',
         })}
-      
+        <button onClick={() => alert('Compra realizada com sucesso!')}>
+                Finalizar Compra
+          </button>
       </div>
     </aside>
   );
