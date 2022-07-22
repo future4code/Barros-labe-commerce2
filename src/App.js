@@ -9,6 +9,7 @@ function App() {
   const { produtos } = data;
   const [cartItems, setCartItems] = useState([]);
   const onAdd = (product) => {
+    console.log(cartItems);
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
@@ -39,7 +40,7 @@ function App() {
         <Filtros/>
         <Home products={produtos} onAdd={onAdd}></Home>
         <Carrinho
-         
+          cartItems={cartItems}
         ></Carrinho>
       </div>
     </div>
