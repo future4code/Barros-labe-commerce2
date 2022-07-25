@@ -6,7 +6,7 @@ export default function Home(props) {
   return (
     <main className="block col-2">
       <h2>Produtos</h2>
-      <div className="row">
+      <div className="row-1">
         {products.map((product) => (
           <Product key={product.id} product={product} onAdd={onAdd}></Product>
         ))}

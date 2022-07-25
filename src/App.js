@@ -34,12 +34,23 @@ function App() {
   };
   return (
     <div className="App">
-      <Header countCartItems={cartItems.length}></Header>
+      <Header className="row" countCartItems={cartItems.length}>
+      
+      </Header>
       <div className="row">
-        <Filtros/>
+      <div>
+      <Filtros className="col-1">
+
+      </Filtros>
+        </div>
+        <div className="card">
         <Home products={produtos} onAdd={onAdd}></Home>
+        </div>
+        
         <Carrinho
-         
+         cartItems={cartItems}
+         onAdd={onAdd}
+         onRemove={onRemove}
         ></Carrinho>
       </div>
     </div>
